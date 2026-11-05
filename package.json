@@ -1,0 +1,32 @@
+{
+  "name": "hx-invite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "华夏银行客户经理邀请归因 + 积分 MVP",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "reset": "node scripts/reset-db.mjs"
+  },
+  "dependencies": {
+    "next": "^15.5.29",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

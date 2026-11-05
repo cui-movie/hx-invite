@@ -1,0 +1,18 @@
+# Render Blueprint — 免费 Web Service（无持久盘）
+# 部署：把仓库推到 GitHub/GitLab 后打开
+# https://dashboard.render.com/blueprint/new?repo=<你的仓库 HTTPS URL>
+services:
+  - type: web
+    name: hx-invite
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22.22.0"
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: ./data
